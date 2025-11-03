@@ -1,2 +1,4 @@
 *.tsv
 .ipynb_checkpoints/
+*.pdf
+ebay_ner_model
