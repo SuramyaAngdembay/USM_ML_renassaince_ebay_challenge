@@ -157,7 +157,7 @@ USM_AI_Renaissance (University of Southern Mississippi)
 - Suramya Angdembay 
 - Gunjan Sah
 
-# For reproducibility and research inquiries, contact: Suramya Angdembay
-# For Data, contact eBay Ml challenge team
+### For reproducibility and research inquiries, contact: Suramya Angdembay
+### For Data, contact eBay Ml challenge team
 
 
