@@ -9,7 +9,7 @@ This repository implements a full NLP pipeline for the **2025 eBay University ML
 The goal is to automatically identify and label **named entities** (aspects) from German eBay product titles related to vehicle parts — such as _manufacturer_, _compatible model_, _quantity_, and _included components_.  
 
 The challenge metric is the **Averaged Fβ-Score (↑)** on hidden leaderboard data, evaluated through EvalAI.  
-Our system achieves **0.867991** on the public leaderboard.
+Our system achieves **0.876912** on the public leaderboard. The link to the leaderboard: https://eval.ai/web/challenges/challenge-page/2508/leaderboard/6263
 
 ---
 
@@ -49,6 +49,7 @@ record_id category_id aspect_name aspect_value
 ---
 
 ## 🗂️ Repository Structure
+```
 eBay_ML_Challenge_2025/
 ├── Annexure_updated.pdf # eBay dataset and aspect descriptions
 ├── Listing_Titles.tsv # 2M unlabeled titles for MLM
@@ -60,6 +61,7 @@ eBay_ML_Challenge_2025/
 ├── ebay_ner_model/ # NER checkpoints
 ├── xlmr_ebay_mlm/ # MLM-pretrained checkpoint
 └── env/ # Python environment (venv)
+```
 
 
 ---
@@ -85,18 +87,21 @@ pip install transformers datasets pandas scikit-learn tqdm
 ## 🚀 Training Workflow
 
 Step 1 — MLM Pretraining
-Command:
+```bash
 python mlm_pretrain.py
+```
 Creates the folder: xlmr_ebay_mlm/ with adapted domain-specific weights.
 
 Step 2 — NER Fine-tuning
-Command:
+```bash
 python roberta_baseline.py
+```
 Saves trained model checkpoints under: ebay_ner_model/
 
 Step 3 — Inference and Submission
-Command:
+```bash
 python roberta_infer.py
+```
 Produces: submission_quiz.tsv (EvalAI-ready)
 
 Step 4 — EvalAI Submission
@@ -129,8 +134,8 @@ Re-use xlmr_ebay_mlm            | Improves NER Fβ by 1–2 points vs raw model
 
 Model                         | Pretraining       | Fβ-Score
 ------------------------------|------------------|---------
-XLM-RoBERTa-Base (baseline)   | None              | 0.860 ± 0.002
-Domain-adapted MLM + NER      | MLM (2M titles)   | 0.867991 ↑
+XLM-RoBERTa-Base (baseline)   | None              | 0.867 ± 0.002
+Domain-adapted MLM + NER      | MLM (2M titles)   | 0.876912 ↑
 
 ---
 
@@ -148,9 +153,9 @@ This repository abides by the official eBay 2025 ML Challenge rules:
 ## 👩‍💻 Authors
 
 USM_AI_Renaissance (University of Southern Mississippi)  
-Suramya Angdembay — Lead Engineer / Research  
-Mentorship under HPC SIG Immersion Program, SC25
-
+Suramya Angdembay 
+Gunjan Sah
 For reproducibility and research inquiries, contact: Suramya Angdembay
+For Data contact eBay Ml challenge team
 
 
