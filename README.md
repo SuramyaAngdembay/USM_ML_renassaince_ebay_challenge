@@ -38,11 +38,12 @@ The resulting checkpoint (e.g., `ebay_ner_model/checkpoint-471`) is used for inf
 
 ### 3. **Inference and Submission Generation**
 The `roberta_infer.py` script tokenizes each quiz listing, predicts token-level BIO tags, converts them to aspect spans, and writes a **UTF-8 tab-separated submission file**:
+```
 record_id category_id aspect_name aspect_value
 5001 1 Kompatible_Fahrzeug_Marke OPEL
 5001 1 Kompatibles_Fahrzeug_Modell ASTRA H 1.7
 5001 1 Hersteller CDTI-SET
-...
+```
 - Output file: `submission_quiz.tsv`  
 - Format validated against EvalAI submission specs.
 
@@ -156,7 +157,7 @@ USM_AI_Renaissance (University of Southern Mississippi)
 - Suramya Angdembay 
 - Gunjan Sah
 
-For reproducibility and research inquiries, contact: Suramya Angdembay
-For Data contact eBay Ml challenge team
+# For reproducibility and research inquiries, contact: Suramya Angdembay
+# For Data, contact eBay Ml challenge team
 
 
