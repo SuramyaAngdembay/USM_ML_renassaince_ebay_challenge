@@ -9,7 +9,7 @@ This repository implements a full NLP pipeline for the **2025 eBay University ML
 The goal is to automatically identify and label **named entities** (aspects) from German eBay product titles related to vehicle parts — such as _manufacturer_, _compatible model_, _quantity_, and _included components_.  
 
 The challenge metric is the **Averaged Fβ-Score (↑)** on hidden leaderboard data, evaluated through EvalAI.  
-Our system achieves **0.876912** on the public leaderboard. The link to the leaderboard: https://eval.ai/web/challenges/challenge-page/2508/leaderboard/6263
+Our system achieves **Rank 23** with **0.876912** on the public leaderboard. The link to the leaderboard: https://eval.ai/web/challenges/challenge-page/2508/leaderboard/6263
 
 ---
 
@@ -153,8 +153,9 @@ This repository abides by the official eBay 2025 ML Challenge rules:
 ## 👩‍💻 Authors
 
 USM_AI_Renaissance (University of Southern Mississippi)  
-Suramya Angdembay 
-Gunjan Sah
+- Suramya Angdembay 
+- Gunjan Sah
+
 For reproducibility and research inquiries, contact: Suramya Angdembay
 For Data contact eBay Ml challenge team
 
