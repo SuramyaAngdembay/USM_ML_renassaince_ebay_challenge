@@ -145,7 +145,6 @@ Domain-adapted MLM + NER      | MLM (2M titles)   | 0.876912 ↑
 This repository abides by the official eBay 2025 ML Challenge rules:
 
 - Uses permissive open-source components (MIT/BSD/Apache 2.0)
-- No eBay data sent to third-party AI platforms
 - No manual annotations performed
 - Models are self-contained and commercially deployable
 
